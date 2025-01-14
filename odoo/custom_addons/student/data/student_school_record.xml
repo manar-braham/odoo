@@ -1,0 +1,8 @@
+<odoo>
+
+
+    <record id="wb_student_sunny" model="wb.student">
+        <field name="name">Original Sunny Leone Student</field>
+    </record>
+
+</odoo>
