@@ -1,0 +1,20 @@
+<odoo>
+     <record id="view_gym_trainer_form" model="ir.ui.view">
+        <field name="name">gym.trainer.form</field>
+        <field name="model">gym.trainer</field>
+        <field name="arch" type="xml">
+            <form string="Trainer">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="speciality"/>
+                        <field name="email"/>
+                        <field name="phone"/>
+                        <field name="active"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+</odoo>

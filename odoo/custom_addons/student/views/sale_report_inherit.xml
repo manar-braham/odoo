@@ -1,0 +1,13 @@
+<odoo>
+    <template id="sale_report_inherit" inherit_id="sale.report_saleorder_document">
+        <xpath expr="//div[@class='row mt-4 mb-2']" position="inside">
+            <div class="col-auto col-6 mw-100 mb-2" id="test_inherit">
+                <div  >
+                    <strong>Test Report Customization</strong><br/>
+                    <span class="m-0" t-field="doc.client_order_ref">SO0000</span>
+                </div>
+            </div>
+        </xpath>
+
+    </template>
+</odoo>

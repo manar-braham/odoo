@@ -26,7 +26,8 @@ Long description of module's purpose
         "data/student_school_record.xml",
         "security/ir.model.access.csv",
         "views/student_view.xml",
-        "views/sale_order.xml"
+        "views/sale_order.xml",
+        "views/sale_report_inherit.xml"
     ],
     'installable': True,
     'application': True,

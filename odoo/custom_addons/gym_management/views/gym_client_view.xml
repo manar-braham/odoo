@@ -1,0 +1,31 @@
+<odoo>
+    <record id="gym_client_form" model="ir.ui.view">
+        <field name="name">gym.client.form</field>
+        <field name="model">gym.client</field>
+        <field name="arch" type="xml">
+            <form string="Client">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="email"/>
+                        <field name="phone"/>
+                        <field name="membership_type"/>
+                        <field name="has_subscription"/>
+                        <field name="subscription_duration" required="1"/>
+                        <field name="subscription_price" required="1"/>
+
+                        <field name="session_type"/>
+                    </group>
+
+
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="gym_action" model="ir.actions.act_window">
+        <field name="name">gym</field>
+        <field name="res_model">gym.client</field>
+        <field name="view_mode">form,tree</field>
+    </record>
+</odoo>
