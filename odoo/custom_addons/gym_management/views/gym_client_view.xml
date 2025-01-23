@@ -23,9 +23,16 @@
         </field>
     </record>
 
-    <record id="gym_action" model="ir.actions.act_window">
-        <field name="name">gym</field>
+    <!-- Action pour Client -->
+    <record id="gym_client_action" model="ir.actions.act_window">
+        <field name="name">Clients</field>
         <field name="res_model">gym.client</field>
-        <field name="view_mode">form,tree</field>
+        <field name="view_mode">tree,form</field>
     </record>
+
+    <!-- Menu pour Client -->
+    <menuitem id="menu_gym_management_client"
+              name="Clients"
+              parent="menu_gym_management"
+               action="gym_client_action"/>
 </odoo>

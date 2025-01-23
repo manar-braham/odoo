@@ -15,4 +15,18 @@
             </form>
         </field>
     </record>
+
+    <!-- Action pour Paiement -->
+    <record id="gym_paiement_action" model="ir.actions.act_window">
+        <field name="name">Paiements</field>
+        <field name="res_model">gym.paiement</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Menu pour Paiement -->
+    <menuitem id="menu_gym_management" name="Gym Management"/>
+    <menuitem id="menu_gym_management_payment"
+              name="Paiements"
+              parent="menu_gym_management"
+              action="gym_paiement_action"/>
 </odoo>

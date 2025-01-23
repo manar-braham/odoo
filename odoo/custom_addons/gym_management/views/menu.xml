@@ -1,10 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
-    <menuitem id="menu_gym_management" name="Gym Management"/>
-    <menuitem id="menu_gym"
-            action="gym_action"
-            name="gym"
-            parent="menu_gym_management"
-  />
+
 
 </odoo>

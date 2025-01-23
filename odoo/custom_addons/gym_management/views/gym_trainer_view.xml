@@ -16,5 +16,14 @@
             </form>
         </field>
     </record>
+        <record id="gym_trainer_action" model="ir.actions.act_window">
+        <field name="name">Trainer</field>
+        <field name="res_model">gym.trainer</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <menuitem id="menu_gym_management_trainer"
+              name="trainer"
+              parent="menu_gym_management"
+              action="gym_trainer_action"/>
 
 </odoo>

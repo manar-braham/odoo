@@ -10,10 +10,24 @@
                         <field name="date"/>
                         <field name="duration"/>
                         <field name="trainer_id"/>
+                        <field name="max_participants"/>
+                        <field name="current_participants" readonly="1"/>
                         <field name="client_ids" widget="many2many_tags"/>
+                        <button name="check_availability" type="object" string="Vérifier la disponibilité" class="btn-primary"/>
                     </group>
                 </sheet>
             </form>
         </field>
     </record>
+    <!-- Action pour Paiement -->
+    <record id="gym_session_action" model="ir.actions.act_window">
+    <field name="name">Gym Sessions</field>
+    <field name="res_model">gym.session</field>
+    <field name="view_mode">tree,form</field>
+</record>
+
+    <menuitem id="menu_gym_management_sessions"
+              name="sessions"
+              parent="menu_gym_management"
+              action="gym_session_action"/>
 </odoo>
