@@ -1,0 +1,33 @@
+<odoo>
+    <data noupdate="1">
+        <record id="email_template_session_confirmation" model="mail.template">
+            <field name="name">Confirmation de session</field>
+            <field name="model_id" ref="gymclient"/>
+            <field name="subject">Confirmation de votre inscription à la session ${object.name}</field>
+            <field name="email_from">${(user.email or 'noreply@example.com')|safe}</field>
+            <field name="email_to">${object.email|safe}</field>
+            <field name="body_html" type="html">
+                <![CDATA[
+                <p>Bonjour ${object.name},</p>
+                <p>Votre inscription à la session "${object.name}" a été confirmée.</p>
+                <p>Merci et à bientôt !</p>
+                ]]>
+            </field>
+        </record>
+
+        <record id="email_template_session_reminder" model="mail.template">
+            <field name="name">Rappel de session</field>
+            <field name="model_id" ref="model_gym_client"/>
+            <field name="subject">Rappel : Session "${object.name}"</field>
+            <field name="email_from">${(user.email or 'noreply@example.com')|safe}</field>
+            <field name="email_to">${object.email|safe}</field>
+            <field name="body_html" type="html">
+                <![CDATA[
+                <p>Bonjour ${object.name},</p>
+                <p>Ceci est un rappel pour la session "${object.name}" prévue le ${object.date}.</p>
+                <p>Merci de votre ponctualité.</p>
+                ]]>
+            </field>
+        </record>
+    </data>
+</odoo>

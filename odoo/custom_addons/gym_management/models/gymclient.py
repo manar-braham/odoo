@@ -7,6 +7,7 @@ class GymClient(models.Model):
     name = fields.Char(required=True)
     email = fields.Char()
     phone = fields.Char()  # Ensure this field exists
+    is_active = fields.Boolean('Is Active', default=True)
     membership_type = fields.Selection([
         ('basic', 'Basic'),
         ('premium', 'Premium'),

@@ -14,6 +14,9 @@
                         <field name="current_participants" readonly="1"/>
                         <field name="client_ids" widget="many2many_tags"/>
                         <button name="check_availability" type="object" string="Vérifier la disponibilité" class="btn-primary"/>
+                        <field name="selected_client" widget="many2one" options="{'no_create': True}" domain="[('is_active', '=', True)]" placeholder="Sélectionner un client"/>
+                        <!-- Bouton pour ajouter un client et envoyer un e-mail de confirmation -->
+                        <button name="add_client_to_session" type="object" string="Ajouter client à la session" class="btn-success"/>
                     </group>
                 </sheet>
             </form>
