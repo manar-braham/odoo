@@ -2,6 +2,7 @@ from odoo import models, fields, api
 
 
 class GymPaiement(models.Model):
+    #_inherit='account.payment'
     _name = 'gym.paiement'
     _description = 'Gym Paiement'
 

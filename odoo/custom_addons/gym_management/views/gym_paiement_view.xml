@@ -6,7 +6,7 @@
             <form string="Paiement">
                 <sheet>
                     <group>
-                        <field name="client_id"/>
+
                         <field name="date"/>
                         <field name="amount"/>
                         <field name="payment_method"/>
